@@ -1,0 +1,13 @@
+How to Play
+- Run NewNetPro2.0.exe
+- Enter Name and click Host or Client
+- Click start when all players are ready
+
+Controls
+•	WASD – move
+•	Mouse – aim
+•	Left click – shoot
+•	Shift – sprint
+•	Space – jump
+•	U – open the scorecard
+•	I – close the scorecard
