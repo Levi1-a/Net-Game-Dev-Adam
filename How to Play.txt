@@ -3,6 +3,8 @@ How to Play
 - Enter Name and click Host or Client
 - Click start when all players are ready
 
+The unbuilt Unity version is in the folder titled "Unbuilt Unity Code"
+
 Controls
 •	WASD – move
 •	Mouse – aim

@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnPoint
+  - Bullet
+  - MedKit
+  - ChatUI
+  - powerUp
+  - Ground
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -14,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 

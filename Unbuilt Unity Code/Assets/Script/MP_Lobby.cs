@@ -31,10 +31,10 @@ public class MP_Lobby : NetworkBehaviour
     public override void NetworkStart()
     {
         Debug.Log("StartingServer");
-         if(IsClient)
-         {
+         //if(IsClient)
+         //{
         nwPlayers.OnListChanged += PlayersInfoChanged;
-         }
+         //}
         if (IsServer)
         {
             NetworkManager.Singleton.OnClientConnectedCallback += ClientConnectedHandle;

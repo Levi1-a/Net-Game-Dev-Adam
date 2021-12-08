@@ -64,6 +64,7 @@
     <Compile Include="Assets\GG FPS Integration Tool\Code\Systems\WeaponCollection.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Enable\Manager.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Manager.cs" />
+    <Compile Include="Assets\Script\MP_DestroyObjOnTouch.cs" />
     <Compile Include="Assets\Script\LPanel.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Systems\NonPlayerController.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Systems\NonPlayerAudio.cs" />
@@ -75,10 +76,14 @@
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Movement\Manager.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Fire\Visual\CartridgeEjector.cs" />
     <Compile Include="Assets\Script\MPBulletSpawner.cs" />
-    <Compile Include="Assets\Script\MPPlayerMovement.cs" />
+    <Compile Include="Assets\Script\BackUp\MPPlayerMovement.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Switch\Loader.cs" />
+    <Compile Include="Assets\Script\MP_PlayerAttribs.cs" />
+    <Compile Include="Assets\Script\MP_BulletScript.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Systems\Ammo.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\General\ArrayConverter.cs" />
+    <Compile Include="Assets\Script\FPSMovement.cs" />
+    <Compile Include="Assets\Script\MP_Mouse.cs" />
     <Compile Include="Assets\Script\MP_PlayerInfo.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Fire\NextShotCountDownHandler.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Reload\Manager.cs" />
@@ -107,6 +112,9 @@
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\General\Audio\Manager.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Switch\Switcher.cs" />
     <Compile Include="Assets\GG FPS Integration Tool\Code\Utilities\WeaponSpace\Fire\Authoriser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Old Camera script.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -331,26 +339,8 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>Library\PackageCache\com.unity.collections@1.0.0-pre.5\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.5.4\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.5.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.5.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@1.5.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.5.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1\Mono.Cecil.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.1-preview.1\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -697,17 +687,11 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="ParrelSync">
-      <HintPath>Library\ScriptAssemblies\ParrelSync.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Multiplayer.MLAPI.Prototyping">
       <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.MLAPI.Prototyping.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -724,17 +708,11 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
@@ -745,11 +723,8 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    <Reference Include="ParrelSync">
+      <HintPath>Library\ScriptAssemblies\ParrelSync.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
